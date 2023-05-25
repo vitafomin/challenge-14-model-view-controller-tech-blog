@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Coding is a rollercoaster!",
+        "description": "I love coding, especially when I get my coding to work, but when you have to sit there and debug it. UGH! that is is the most frustrating!",
+        "user_id": 1 
+    },
+    {
+        "name": "This is literally the best",
+        "description": "I REALLY like coding! This is definitley the right career choice for me",
+        "user_id": 2 
+    },
+    {
+        "name": "The Struggle",
+        "description": "Not going to lie, I really struggled on the OOP topic. It's taking a while for me to really grasp and understand all the concepts!",
+        "user_id": 3  
+    },
+    {
+        "name": "Any Advice?",
+        "description": "I feel like I am getting the main concept of all the topics that I have been learning, but I am curious, does anyone have any advice that could help reallly master all these coding concepts?",
+        "user_id": 4
+    }
+]

@@ -11,12 +11,9 @@ Comment.init (
             primaryKey: true,
             autoIncrement: true
         },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
         description: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
         date_created: {
             type: DataTypes.STRING,
@@ -30,6 +27,13 @@ Comment.init (
                 key: "id",
             },
         },
+        post_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: "post",
+                key: "id",
+            },
+        }
     },
     {
         sequelize,
