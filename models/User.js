@@ -42,13 +42,13 @@ User.init(
                 newUserData.email = await newUserData.email.toLowerCase();
                 return newUserData;
             },
-            beforeCreate: async (updatedUserData) => {
+            beforeUpdate: async (updatedUserData) => {
                 if (updatedUserData.password) {
                     updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
                 }
                 return updatedUserData;
             },
-            beforeCreate: async (updatedUserData) => {
+            beforeUpdate: async (updatedUserData) => {
                 updatedUserData.email = await updatedUserData.email.toLowerCase();
                 return updatedUserData;
             },
