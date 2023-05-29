@@ -1,4 +1,4 @@
-<div class="card">
+{{!-- <div class="card">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">This is a wider card with supporting text below as a
@@ -7,4 +7,31 @@
     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
     </p>
   </div>
+</div> --}}
+
+<div class="row">
+  <h2>Welcome to your Dashboard!</h2>
 </div>
+
+{{#if projects.length}}
+<div class="post-list">
+  <h2>Current Posts:</h2>
+
+  {{#each posts as |post|}}
+  <div>
+    <div>
+      <h4><a href="/post/{{post.id}}">{{post.title}}</a></h4>
+    </div>
+    <div>
+      <button class="update-btn" data-id="{{post.id}}">Update</button>
+    </div>
+    <div>
+      <button class="dele-btn" data-id="{{post.id}}">Delete</button>
+    </div>
+  </div>
+  {{/each}}
+</div>
+{{/if}}
+<button type="post" class="btn btn-primary post-btn"> <a href="./newpost.handlebars"></a>+Post</button>
+
+<script src="../public/js/dashboard.js"></script>

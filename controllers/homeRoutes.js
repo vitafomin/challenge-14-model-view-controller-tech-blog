@@ -8,10 +8,11 @@ router.get("/", async (req, res) => {
             include: [
                 {
                     model: User,
-                    attributes: ["email"]
+                  //  attributes: ["email"]
                 }
             ]
         });
+        // this line serializes the data
         const posts = postData.map((post) => post.get({ plain: true }));
         res.render("homepage", {
             posts,
