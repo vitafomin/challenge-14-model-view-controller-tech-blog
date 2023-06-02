@@ -20,7 +20,7 @@
   {{#each posts as |post|}}
   <div>
     <div>
-      <h4><a href="/post/{{post.id}}">{{post.title}}</a></h4>
+      <h4><a href="/post/{{post.id}}">{{post.name}}</a></h4>
     </div>
     <div>
       <button class="update-btn" data-id="{{post.id}}">Update</button>
@@ -34,4 +34,4 @@
 {{/if}}
 <button type="post" class="btn btn-primary post-btn"> <a href="./newpost.handlebars"></a>+Post</button>
 
-<script src="../public/js/dashboard.js"></script>
+{{!-- <script src="../public/js/dashboard.js"></script> --}}

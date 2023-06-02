@@ -6,42 +6,52 @@ body {
 }
 #header {
     width: 100%;
-    display: flex;
-    flex-direction: row;
+    text-align: center;
+    /* display: flex;
+    flex-direction: row; */
 }
 nav ul {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
-    justify-content: space-between;
+    justify-content: space-evenly;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     font-weight: bolder;
     font-style: italic;
     text-decoration: underline;
     text-decoration-color: black;
-    width: 450px;
+    width: 87%;
     padding: 20px;
     height: 10px;
-    margin-right: 20px;
     margin-bottom: -2px;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-left: 50px;
+    margin-bottom: 30px;
 }
 nav a {
     color: rgb(27, 37, 43);
+    
 }
+
 .login {
     margin-top: 100px;
     margin-left: 450px;
-    margin-top: 150px;
-    padding: 20px;
+    padding: 10px;
     width: 30%;
     text-align: center;
    border: 3px solid black;
 }
+.login-title {
+    display: flex;
+    margin-left: 135px;
 
-#emailHelp {
-    font-size: 10px;
-    margin-top: 0px ;
+}
+
+#userEmail {
+    font-size: 15px;
+    margin-top: 30px ;
 }
 
 .btn {
@@ -57,8 +67,16 @@ nav a {
 .password {
     font-size: larger;
 }
-.signUp {
-    text-decoration: underline;
+.signup {
+    margin-top: 100px;
+    margin-left: 450px;
+    padding: 10px;
+    width: 30%;
+    text-align: center;
+   border: 3px solid black;
+}
+#email-addon {
+    font-size: x-small;
 }
 .card {
     width: 80%;
@@ -90,6 +108,17 @@ nav a {
     color: black;
     margin-top: 5px;
     text-align: center;
+}
+.post {
+    border: 1px solid black;
+    margin: 5px;
+    width: 90%;
+    margin-left: 50px;
+    text-indent: 15px;
+
+}
+.post a {
+    color: black;
 }
 .post-btn {
     margin-left: 450px;

@@ -1,18 +1,7 @@
-{{!-- <div class="card">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a
-      natural lead-in to additional content. This content is a little bit
-      longer.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
-    </p>
-  </div>
-</div> --}}
-
 
 {{#each posts as |post|}}
-<div>
-  <h2><a href="/post/{{post.id}}">{{post.title}}</a></h2>
+<div class="post">
+  <h4 class="post-name"><a href="/post/{{post.id}}">{{post.name}}</a></h4>
   <p>
     {{post.description}}
   </p>
