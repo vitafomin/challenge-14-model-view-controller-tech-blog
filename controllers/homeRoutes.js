@@ -46,13 +46,19 @@ router.get("/post/:id", async (req, res) => {
 });
 
 router.get("/dashboard", auth, async (req, res) => {
+    console.log("Hit Dashboard Route...")
+    console.log("Session: ", req.session);
     try {
-        const userData = await User.findByPk(req.session.user_id, {
+        const userData = await User.findOne({ 
+            where: {
+                user_id: req.session.user_id
+            },
             include: [{ model: Post }],
             attributes: { exclude: ["password"] }
         });
+        console.log("User Data: ", userData)
         const user = userData.get({ plain: true });
-
+        console.log("User: ", user)
         res.render("dashboard", {
             user,
             logged_in: true
