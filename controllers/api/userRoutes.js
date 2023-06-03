@@ -34,7 +34,7 @@ router.post("/login", async (req, res) => {
         console.log("Password condition: ", validPassword);
         
         if(!validPassword) {
-            res.status(400).json({ message: "Incorrect email of password" });
+            res.status(400).json({ message: "Incorrect email or password" });
             return;
         }
         req.session.save(() => {

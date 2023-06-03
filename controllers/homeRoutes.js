@@ -51,20 +51,22 @@ router.get("/dashboard", auth, async (req, res) => {
     try {
         const userData = await User.findOne({ 
             where: {
-                user_id: req.session.user_id
+                id: req.session.user_id
             },
             include: [{ model: Post }],
             attributes: { exclude: ["password"] }
         });
         console.log("User Data: ", userData)
         const user = userData.get({ plain: true });
+        const posts = user.posts;
         console.log("User: ", user)
         res.render("dashboard", {
-            user,
-            logged_in: true
+            posts,
+            showModal: false
         });
     }
     catch (err) {
+        console.log("Error :" + err);
         res.status(500).send({message: "Failed to go to dashboard"});
     }
 });

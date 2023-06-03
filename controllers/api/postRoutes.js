@@ -3,11 +3,15 @@ const { Post } = require("../../models");
 const auth = require("../../utils/auth");
 
 router.post("/", auth, async (req, res) => {
+    console.log("post req body: " + JSON.stringify(req.body));
+    const test = JSON.stringify({ ...req.body, user_id: req.session.user_id });
+    console.log("test: " + test);
     try {
         const newPost = await Post.create({ ...req.body, user_id: req.session.user_id });
-        res.status(200).send(newPost);
+        res.status(200).json(newPost);
     }
     catch (err) {
+        console.log("error: " + err);
         res.status(400).send(err);
     }
 });

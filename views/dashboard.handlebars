@@ -9,11 +9,31 @@
   </div>
 </div> --}}
 
+{{!-- {{#if showModal}} --}}
+<div>
+  <h3>Create New Post</h3>
+
+  <form class="new-post">
+    <div class="title">
+      <label for="post-title">Post Title:</label>
+      <input type="text" class="post-title" name="post-title"/>
+    </div>
+    <div class="post-desc">
+      <label for="post-desc">Post Description</label>
+      <input type="text" class="description" name="post-desc"/>
+    </div>
+    <div>
+      <button type="submit" class="post-submit">Create</button>
+    </div>
+  </form>
+</div>
+{{!-- {{/if}} --}}
+
 <div class="row">
   <h2>Welcome to your Dashboard!</h2>
 </div>
 
-{{#if projects.length}}
+{{#if posts.length}}
 <div class="post-list">
   <h2>Current Posts:</h2>
 
@@ -32,6 +52,8 @@
   {{/each}}
 </div>
 {{/if}}
+
 <button type="post" class="btn btn-primary post-btn"> <a href="./newpost.handlebars"></a>+Post</button>
 
 <script src="/js/dashboard.js"></script>
+

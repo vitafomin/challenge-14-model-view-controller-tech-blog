@@ -2,13 +2,17 @@ const newFormHandler = async (event) => {
     event.preventDefault();
 
     const title = document.querySelector(".post-title").value.trim()
-    const description = document.querySelector(".post-desc").value.trim()
+    const description = document.querySelector(".description").value.trim()
 
     if (title && description) {
+        const name = title;
+        console.log("request " + JSON.stringify({ name, description }))
         const response = await fetch(`/api/posts`, {
             method: "POST",
-            body: JSON.stringify({ title, description })
+            body: JSON.stringify({ name, description }),
+            headers: { 'Content-Type': 'application/json' }
         });
+        console.log("post res: " + response);
 
         if (response.ok) {
             document.location.replace("/dashboard")
@@ -40,7 +44,7 @@ const delButtonHandler = async (event) => {
     if (event.target.hasAttribute("data-id")) {
         const id = event.target.getAttribute("data-id")
 
-        const response = await fetch(`/api/posts/${id}`, {
+        const response = await fetch(`/api/posts/:id`, {
             method: "DELETE"
         });
 
@@ -50,6 +54,12 @@ const delButtonHandler = async (event) => {
         else {
             alert("Failed to Delete Post")
         }
+    }
+};
+
+const newPost = async (event) => {
+    if (event.target.hasAttribute(".post-btn")) {
+        show
     }
 }
 
