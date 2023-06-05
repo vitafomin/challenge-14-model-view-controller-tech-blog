@@ -62,7 +62,7 @@ router.get("/dashboard", auth, async (req, res) => {
         console.log("User: ", user)
         res.render("dashboard", {
             posts,
-            showModal: false
+            // showModal: false
         });
     }
     catch (err) {
