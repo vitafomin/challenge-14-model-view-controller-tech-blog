@@ -12,14 +12,14 @@
         <h1 id="title">The Tech Blog</h1>
         <nav>
             <ul class="links">
-                {{#if logged_in}}
-                <li class="homepage-link"><a href="/">Homepage</a></li>
-                <li class="dashboard-link"><a href="/dashboard">Dashboard</a></li>
-                <li class="logout-link"><a class="logout" href="/">Logout</a></li>
-                {{else}}
+                {{!-- {{#if logged_in }} --}}
                 <li class="login-link"><a href="/login">Login</a></li>
                 <li class="signup-link"><a href="/signup">Sign Up</a></li>
-                {{/if}}
+                {{!-- {{else}} --}}
+               <li class="homepage-link"><a href="/">Homepage</a></li>
+                <li class="dashboard-link"><a href="/dashboard">Dashboard</a></li>
+                <li class="logout-link"><a class="logout" href="/">Logout</a></li>
+                {{!-- {{/if}} --}}
             </ul>
         </nav>
     </header>

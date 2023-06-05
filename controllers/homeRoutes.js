@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Post } = require("../models");
+const { User, Post, Comment } = require("../models");
 const auth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
@@ -31,6 +31,10 @@ router.get("/post/:id", async (req, res) => {
                 {
                     model: User,
                     attributes: ["email"]
+                },
+                {
+                    model: Comment,
+                    attributes: ["description"]
                 }
             ]
         });
@@ -53,7 +57,7 @@ router.get("/dashboard", auth, async (req, res) => {
             where: {
                 id: req.session.user_id
             },
-            include: [{ model: Post }],
+            include: [{ model: Post, Comment }],
             attributes: { exclude: ["password"] }
         });
         console.log("User Data: ", userData)

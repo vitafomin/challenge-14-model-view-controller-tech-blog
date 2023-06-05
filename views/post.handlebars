@@ -4,10 +4,20 @@
   <button type="post" class="btn btn-primary post-btn">Post</button>
 </div> --}}
 
-<div>
-  <h3>Create New Post</h3>
+<link rel="stylesheet" href="/css/style.css">
+{{#if logged_in}}
+<div class="one-post">
+  <h3>{{post.name}}</h3>
 
-  <form class="new-post">
+  <p>{{{post.description}}}</p>
+  <p>{{{comment.description}}}</p>
+</div>
+{{else}}
+<a href="/login"></a>
+{{/if}}
+  {{!-- <p>{{format_date date_created}}</p> --}}
+
+  {{!-- <form class="new-post">
     <div class="title">
       <label for="post-title">Post Title:</label>
       <input type="text" class="post-title" name="post-title"/>
@@ -20,7 +30,7 @@
       <button type="submit" class="post-submit">Create</button>
     </div>
   </form>
-</div>
+</div> --}}
 
 <script src="/js/dashboard.js"></script>
 

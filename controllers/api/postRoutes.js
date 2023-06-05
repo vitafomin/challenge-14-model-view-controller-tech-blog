@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Post } = require("../../models");
+const { Post, Comment } = require("../../models");
 const auth = require("../../utils/auth");
 
 router.post("/", auth, async (req, res) => {
@@ -23,6 +23,7 @@ router.put("/:id", auth, async (req, res) => {
             id: req.params.id,
             user_id: req.session.user_id
         },
+        
     });
     if (!postData) {
         res.status(404).send({ message: "Post not found" });
@@ -42,6 +43,11 @@ router.delete("/:id", auth, async (req, res) => {
                 id: req.params.id,
                 user_id: req.session.user_id,
             },
+            include: [
+                {
+                    model: Comment
+                }
+            ]
         });
         if (!postData) {
             res.status(404).send({ message: "No post found" });
