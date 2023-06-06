@@ -5,16 +5,21 @@
 </div> --}}
 
 <link rel="stylesheet" href="/css/style.css">
-{{#if logged_in}}
+{{!-- {{#if logged_in}} --}}
 <div class="one-post">
   <h3>{{post.name}}</h3>
-
   <p>{{{post.description}}}</p>
+  <h4>Comments:</h4>
+  {{#each comments as |comment|}}
   <p>{{{comment.description}}}</p>
+  {{/each}}
 </div>
-{{else}}
-<a href="/login"></a>
-{{/if}}
+<div>
+</div>
+</div>
+{{!-- {{else}} --}}
+{{!-- <a href="/login"></a> --}}
+{{!-- {{/if}} --}}
   {{!-- <p>{{format_date date_created}}</p> --}}
 
   {{!-- <form class="new-post">

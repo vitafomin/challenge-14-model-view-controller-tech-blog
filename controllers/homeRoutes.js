@@ -24,14 +24,14 @@ router.get("/", async (req, res) => {
     }
 });
 
-router.get("/post/:id", async (req, res) => {
+router.get("/post/:id", auth, async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
             include: [
-                {
-                    model: User,
-                    attributes: ["email"]
-                },
+                // {
+                //     model: User,
+                //     attributes: ["email"]
+                // },
                 {
                     model: Comment,
                     attributes: ["description"]
@@ -39,8 +39,10 @@ router.get("/post/:id", async (req, res) => {
             ]
         });
         const post = postData.get({ plain: true });
+        const comments = post.comments
         res.render("post", {
             post,
+            comments,
             logged_in: req.session.logged_in
         });
     }
@@ -66,6 +68,7 @@ router.get("/dashboard", auth, async (req, res) => {
         console.log("User: ", user)
         res.render("dashboard", {
             posts,
+            logged_in: req.session.logged_in
             // showModal: false
         });
     }
