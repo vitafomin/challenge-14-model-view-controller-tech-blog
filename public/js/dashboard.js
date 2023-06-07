@@ -1,3 +1,16 @@
+
+
+const update = document.querySelector("#update")
+const updateTitle = document.querySelector(".update-title")
+const updateDesc = document.querySelector(".update-post-desc")
+const updateBtn = document.querySelector(".update-post-submit")
+// update.classList.add("hide");
+// update.addClass("hide")
+// updateTitle.classList.add("hide")
+// updateDesc.classList.add("hide")
+// updateBtn.classList.add("hide")
+
+
 const newFormHandler = async (event) => {
     event.preventDefault();
 
@@ -23,6 +36,7 @@ const newFormHandler = async (event) => {
     }
 };
 const updateFormHandler = async (event) => {
+    update.classList.remove("hide")
     if (event.target.hasAttribute("data-id")) {
         const id = event.target.getAttribute("data-id");
 
@@ -44,7 +58,7 @@ const delButtonHandler = async (event) => {
     if (event.target.hasAttribute("data-id")) {
         const id = event.target.getAttribute("data-id")
 
-        const response = await fetch(`/api/posts/:id`, {
+        const response = await fetch(`/api/posts/${id}`, {
             method: "DELETE"
         });
 
@@ -57,6 +71,28 @@ const delButtonHandler = async (event) => {
     }
 };
 
+// const commentFormHandler = async (event) => {
+//     event.preventDefault();
+
+//     const description = document.querySelector(".comment-description").value.trim()
+
+//     if (description) {
+//         const response = await fetch(`/api/posts`, {
+//             method: "POST",
+//             body: JSON.stringify({ description, post_id }),
+//             headers: { 'Content-Type': 'application/json' }
+//         });
+//         console.log(response);
+
+//         if (response.ok) {
+//             document.location("/post")
+//         }
+//         else {
+//             alert("Failed to create comment")
+//         }
+//     }
+// };
+
 const newPost = async (event) => {
     if (event.target.hasAttribute(".post-btn")) {
         show
@@ -68,3 +104,5 @@ document.querySelector(".post-submit").addEventListener("click", newFormHandler)
 document.querySelector(".update-btn").addEventListener("click", updateFormHandler);
 
 document.querySelector(".dele-btn").addEventListener("click", delButtonHandler);
+
+// document.querySelector(".comment-submit").addEventListener("click", commentFormHandler);

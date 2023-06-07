@@ -1,4 +1,4 @@
-{{!-- <div class="card">
+{{! <div class="card">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">This is a wider card with supporting text below as a
@@ -7,58 +7,79 @@
     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
     </p>
   </div>
-</div> --}}
+</div> }}
 
 {{!-- {{#if showModal}} --}}
 
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css" />
 
 <div class="dash-head">
   <h2>Welcome to your Dashboard!</h2>
 </div>
 <div class="column">
   <div class="column1">
-  <h3>Create New Post</h3>
+    <h3>Create New Post</h3>
 
-  <form class="new-post">
-    <div class="title">
-      <label for="post-title">Post Title:</label>
-      <input type="text" class="post-title" name="post-title"/>
-    </div>
-    <div class="post-desc">
-      <label class="desc-title" for="post-desc">Post Description</label>
-      <textarea type="text-box" class="description" name="post-desc"></textarea>
-    </div>
-    <div>
-      <button type="submit" class="post-submit">Create</button>
-    </div>
-  </form>
+    <form class="new-post">
+      <div class="title">
+        <label for="post-title">Post Title:</label>
+        <input type="text" class="post-title" name="post-title" />
+      </div>
+      <div class="post-desc">
+        <label class="desc-title" for="post-desc">Post Description</label>
+        <textarea
+          type="text-box"
+          class="description"
+          name="post-desc"
+        ></textarea>
+      </div>
+      <div>
+        <button type="submit" class="post-submit">Create</button>
+      </div>
+    </form>
   </div>
 
   {{!-- {{/if}} --}}
 
   <div class="column2">
-  {{#if posts.length}}
-  <div class="post-list">
-  <h2>My Posts:</h2>
+    {{#if posts.length}}
+      <div class="post-list">
+        <h2>My Posts:</h2>
 
-  {{#each posts as |post|}}
-  <div>
-    <div>
-      <h4><a href="/post/{{post.id}}">{{post.name}}</a></h4>
-    </div>
-    <div>
-      <button class="update-btn" data-id="{{post.id}}">Update</button>
-    </div>
-    <div>
-      <button class="dele-btn" data-id="{{post.id}}">Delete</button>
-    </div>
-  </div>
-  {{/each}}
-  </div>
-  {{/if}}
+        {{#each posts as |post|}}
+          <div>
+            <div>
+              <h4><a href="/post/{{post.id}}">{{post.name}}</a></h4>
+            </div>
+            <div>
+              <button class="update-btn" data-id="{{post.id}}">Update</button>
+            </div>
+            <div class="update hide">
+              <div class="update-title">
+                <label for="up-post-title">Post Title:</label>
+                <input type="text" class="up-post-title" name="up-post-title" />
+              </div>
+              <div class="update-post-desc">
+                <label class="up-desc-title" for="up-post-desc">Post Description</label>
+                <textarea
+                  type="text-box"
+                  class="update-description"
+                  name="up-post-desc"
+                ></textarea>
+              </div>
+              <div>
+                <button type="submit" class="update-post-submit">Update Post</button>
+              </div>
+            </div>
+            <div class="delete" data-id="{{post.id}}">
+              <button class="dele-btn">Delete</button>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
   </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="/js/dashboard.js"></script>
-

@@ -43,11 +43,11 @@ router.delete("/:id", auth, async (req, res) => {
                 id: req.params.id,
                 user_id: req.session.user_id,
             },
-            include: [
-                {
-                    model: Comment
-                }
-            ]
+            // include: [
+            //     {
+            //         model: Comment
+            //     }
+            // ]
         });
         if (!postData) {
             res.status(404).send({ message: "No post found" });
