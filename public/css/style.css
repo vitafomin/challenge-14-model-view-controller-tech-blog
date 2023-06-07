@@ -167,11 +167,23 @@ nav a {
     top: 6;
 }
 
-.one-post {
+.post-page {
     border: 3px solid black;
     text-align: center;
     height: 500px;
     width: 95%;
     margin-left: 15px;
     border-radius: 15px;
+}
+.comment-sec {
+    margin-top: 80px;
+    border-top: 2px solid black;
+    border-radius: 10px;
+    width: 600px;
+    margin-left: 380px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+.comments {
+    margin-top: 150px;
 }

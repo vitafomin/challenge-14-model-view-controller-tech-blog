@@ -5,17 +5,23 @@
 </div> --}}
 
 <link rel="stylesheet" href="/css/style.css">
+<div class="post-page">
 {{!-- {{#if logged_in}} --}}
-<div class="one-post">
-  <h3>{{post.name}}</h3>
-  <p>{{{post.description}}}</p>
-  <h4>Comments:</h4>
-  {{#each comments as |comment|}}
-  <p>{{{comment.description}}}</p>
-  {{/each}}
-</div>
-<div>
-</div>
+  <div class="one-post">
+    <h3>{{post.name}}</h3>
+    <p>{{{post.description}}}</p>
+    <h4 class="comment-sec">Comments:</h4>
+    {{#each comments as |comment|}}
+    <p>{{{comment.description}}}</p>
+    <p>- {{{comment.username}}}</p>
+    {{/each}}
+  </div>
+  <div>
+    <div class="comments">
+      <label class="comment" for="comment">Add Comment:</label>
+      <textarea type="text-box" class="comment-desc" name="comment-desc"></textarea>
+    </div>
+  </div>
 </div>
 {{!-- {{else}} --}}
 {{!-- <a href="/login"></a> --}}

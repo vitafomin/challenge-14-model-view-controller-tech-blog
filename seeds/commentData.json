@@ -2,21 +2,25 @@
     {
         "description": "I would have to agree with with you! I HATE trying to debug my code only to find out that it was a simple spelling error!",
         "user_id": 4,
-        "post_id": 1
+        "post_id": 1,
+        "username": "sammyyy@hotmail.com"
     },
     {
         "description": "Thats awesome! I am really happy for your career change!! This is a great field to be in",
         "user_id": 3,
-        "post_id": 2
+        "post_id": 2,
+        "username": "drewcamp@hotmail.com"
     },
     {
         "description": "HEY! give yourself a little grace! That topic is very complex, and a tough one!",
         "user_id": 2,
-        "post_id": 3
+        "post_id": 3,
+        "username": "janedoe@gmail.com" 
     },
     {
         "description": "Everyone learns differently, but I would have to say that watching videos on whatever topic you want to master has helped me ALOT!",
         "user_id": 1,
-        "post_id": 4
+        "post_id": 4,
+        "username": "johndoe@hotmail.com"
     }
 ]

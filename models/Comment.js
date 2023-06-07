@@ -33,6 +33,13 @@ Comment.init (
                 model: "post",
                 key: "id",
             },
+        },
+        username: {
+            type: DataTypes.STRING,
+            references: {
+                model: "user",
+                key: "email"
+            }
         }
     },
     {
