@@ -1,6 +1,6 @@
 body {
     width: 100%;
-    background-color: rgb(155, 155, 151);
+    background-color: rgb(162, 176, 185);
     color: rgb(0, 0, 0);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -143,17 +143,28 @@ nav a {
 .column1 {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 30%;
     margin-left: 100px;
     font-size: large;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    align-items: center;
+    height: 200px;
+    margin-top: -1px;
 }
 
 .column2{
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 20%;
     margin-left: 900px;
-    margin-top: -125px;
+    margin-top: -240px;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-radius: 10px;
+    height: 500px;
+    padding-left: 50px;
 }
 .dash-head {
     text-align: center;
@@ -189,4 +200,8 @@ nav a {
 }
 .hide {
     display: none;
+}
+
+.post-list {
+    
 }

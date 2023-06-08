@@ -107,7 +107,7 @@ const newPost = async (event) => {
 }
 
 const showUpdateForm = async (event) => {
-    event.preventDefault()
+    // event.preventDefault()
     update.classList.remove("hide")
 }
 
