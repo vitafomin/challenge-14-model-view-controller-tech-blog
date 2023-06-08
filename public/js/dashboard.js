@@ -1,6 +1,6 @@
 
 
-const update = document.querySelector("#update")
+const update = document.querySelector(".update")
 const updateTitle = document.querySelector(".update-title")
 const updateDesc = document.querySelector(".update-post-desc")
 const updateBtn = document.querySelector(".update-post-submit")
@@ -36,11 +36,14 @@ const newFormHandler = async (event) => {
     }
 };
 const updateFormHandler = async (event) => {
-    update.classList.remove("hide")
+    // update.classList.remove("hide")
+
+    const title = document.querySelector(".up-post-title").value.trim()
+    const description = document.querySelector(".update-description").value.trim()
     if (event.target.hasAttribute("data-id")) {
         const id = event.target.getAttribute("data-id");
 
-        const response = await fetch(`api.posts/${id}`, {
+        const response = await fetch(`api/posts/${id}`, {
             method: "PUT",
             body: JSON.stringify({ title, description })
         });
@@ -55,7 +58,11 @@ const updateFormHandler = async (event) => {
 };
 
 const delButtonHandler = async (event) => {
+    event.preventDefault();
+    console.log(event)
+    console.log("DELETTTTT")
     if (event.target.hasAttribute("data-id")) {
+        console.log("if block reached")
         const id = event.target.getAttribute("data-id")
 
         const response = await fetch(`/api/posts/${id}`, {
@@ -99,10 +106,29 @@ const newPost = async (event) => {
     }
 }
 
+const showUpdateForm = async (event) => {
+    event.preventDefault()
+    update.classList.remove("hide")
+}
+
 document.querySelector(".post-submit").addEventListener("click", newFormHandler);
 
-document.querySelector(".update-btn").addEventListener("click", updateFormHandler);
+// document.querySelector(".update-btn").addEventListener("click", updateFormHandler);
 
-document.querySelector(".dele-btn").addEventListener("click", delButtonHandler);
+// document.querySelector(".dele-btn").addEventListener("click", delButtonHandler);
+
+document.querySelectorAll(".update-post-submit").forEach(i => {
+    i.addEventListener("click", updateFormHandler)
+})
+
+document.querySelectorAll(".dele-btn").forEach(i => {
+    i.addEventListener("click", delButtonHandler)
+})
+
+document.querySelectorAll(".update-btn").forEach(i => {
+    i.addEventListener("click", showUpdateForm)
+})
+
+
 
 // document.querySelector(".comment-submit").addEventListener("click", commentFormHandler);
