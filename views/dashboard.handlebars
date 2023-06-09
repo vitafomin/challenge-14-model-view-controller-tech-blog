@@ -37,6 +37,9 @@
             <div>
               <h4><a href="/post/{{post.id}}">{{post.name}}</a></h4>
             </div>
+            <div type="submit">
+              <button class="dele-btn" data-id="{{post.id}}">Delete</button>
+            </div>
             <div>
               <button class="update-btn" data-id="{{post.id}}">Update</button>
             </div>
@@ -66,9 +69,6 @@
                   data-id="{{post.id}}"
                 >Update Post</button>
               </div>
-            </div>
-            <div type="submit">
-              <button class="dele-btn" data-id="{{post.id}}">Delete</button>
             </div>
           </div>
         {{/each}}

@@ -40,6 +40,7 @@ nav a {
   width: 30%;
   text-align: center;
   border: 3px solid black;
+  border-radius: 25px;
 }
 .login-title {
   display: flex;
@@ -71,6 +72,7 @@ nav a {
   width: 30%;
   text-align: center;
   border: 3px solid black;
+  border-radius: 25px;
 }
 #email-addon {
   font-size: x-small;
@@ -80,6 +82,7 @@ nav a {
   padding: 5px;
   margin-left: 70px;
   border: 3px solid black;
+  border-radius: 25px;
   text-align: center;
 }
 .postTitle {
@@ -108,10 +111,12 @@ nav a {
 }
 .post {
   border: 1px solid black;
+  border-radius: 25px;
   margin: 5px;
   width: 90%;
   margin-left: 50px;
-  text-indent: 15px;
+  /* text-indent: 15px; */
+  padding-left: 10px;
 }
 .post a {
   color: black;
