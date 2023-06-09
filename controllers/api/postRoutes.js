@@ -19,20 +19,22 @@ router.post("/", auth, async (req, res) => {
 });
 
 router.put("/:id", auth, async (req, res) => {
+  console.log("this is the body", req.body)
   try {
-    const postData = await Post.update({
-      where: {
+    const postData = await Post.update({ ...req.body},
+      {where: {
         id: req.params.id,
         user_id: req.session.user_id,
-      },
-    });
+      }}
+    );
     if (!postData) {
-      res.status(404).send({ message: "Post not found" });
+      res.status(404).json({ message: "Post not found" });
       return;
     }
-    res.status(200).send(postData);
+    res.status(200).json(postData);
   } catch (err) {
-    res.status(400).send(err);
+    console.log(err)
+    res.status(400).json(err);
   }
 });
 

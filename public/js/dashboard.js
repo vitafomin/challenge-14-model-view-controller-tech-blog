@@ -1,6 +1,7 @@
 
 
 const update = document.querySelector(".update")
+
 const updateTitle = document.querySelector(".update-title")
 const updateDesc = document.querySelector(".update-post-desc")
 const updateBtn = document.querySelector(".update-post-submit")
@@ -38,14 +39,15 @@ const newFormHandler = async (event) => {
 const updateFormHandler = async (event) => {
     // update.classList.remove("hide")
 
-    const title = document.querySelector(".up-post-title").value.trim()
-    const description = document.querySelector(".update-description").value.trim()
+    const name = document.getElementById("title-"+event.target.getAttribute("data-id")).value.trim()
+    const description = document.getElementById("desc-"+event.target.getAttribute("data-id")).value.trim()
     if (event.target.hasAttribute("data-id")) {
         const id = event.target.getAttribute("data-id");
 
         const response = await fetch(`api/posts/${id}`, {
             method: "PUT",
-            body: JSON.stringify({ title, description })
+            body: JSON.stringify({ name, description }),
+            headers: { 'Content-Type': 'application/json' }
         });
 
         if (response.ok) {
@@ -107,8 +109,11 @@ const newPost = async (event) => {
 }
 
 const showUpdateForm = async (event) => {
-    // event.preventDefault()
-    update.classList.remove("hide")
+    console.log(event)
+    const element = document.getElementById(event.target.getAttribute("data-id"))
+    // event.target
+    element.classList.remove("hide")
+
 }
 
 document.querySelector(".post-submit").addEventListener("click", newFormHandler);
@@ -128,6 +133,7 @@ document.querySelectorAll(".dele-btn").forEach(i => {
 document.querySelectorAll(".update-btn").forEach(i => {
     i.addEventListener("click", showUpdateForm)
 })
+
 
 
 

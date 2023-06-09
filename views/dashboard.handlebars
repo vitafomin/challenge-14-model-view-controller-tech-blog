@@ -54,10 +54,10 @@
             <div>
               <button class="update-btn" data-id="{{post.id}}">Update</button>
             </div>
-            <div class="update hide">
+            <div class="update hide" id="{{post.id}}">
               <div class="update-title">
                 <label for="up-post-title">Post Title:</label>
-                <input type="text" class="up-post-title" name="up-post-title" />
+                <input type="text" class="up-post-title" name="up-post-title" id="title-{{post.id}}"/>
               </div>
               <div class="update-post-desc">
                 <label class="up-desc-title" for="up-post-desc">Post Description</label>
@@ -65,10 +65,11 @@
                   type="text-box"
                   class="update-description"
                   name="up-post-desc"
+                  id="desc-{{post.id}}"
                 ></textarea>
               </div>
               <div>
-                <button type="submit" class="update-post-submit">Update Post</button>
+                <button type="submit" class="update-post-submit" data-id="{{post.id}}">Update Post</button>
               </div>
             </div>
             <div type="submit">
