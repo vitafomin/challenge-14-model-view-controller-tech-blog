@@ -35,6 +35,7 @@ router.get("/post/:id", auth, async (req, res) => {
         });
         const post = postData.get({ plain: true });
         const comments = post.comments
+        console.log("Comment Data: ", comments);
         res.render("post", {
             post,
             comments,
