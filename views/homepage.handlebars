@@ -1,11 +1,10 @@
-
 {{#each posts as |post|}}
-<div class="post">
-  <h4 class="post-name"><a href="/post/{{post.id}}">{{post.name}}</a></h4>
-  <p>
-    {{post.description}}
-  </p>
-</div>
+  <div class="post">
+    <h4 class="post-name"><a href="/post/{{post.id}}">{{post.name}}</a></h4>
+    <p>
+      {{post.description}}
+    </p>
+  </div>
 {{/each}}
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

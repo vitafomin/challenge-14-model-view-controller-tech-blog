@@ -1,52 +1,33 @@
-{{!-- <div class="post">
-  <input class="postTitle" type="text" placeholder="Title" />
-  <input class="postDescription" type="text" placeholder="Description" />
-  <button type="post" class="btn btn-primary post-btn">Post</button>
-</div> --}}
-
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css" />
 <div class="post-page">
-{{!-- {{#if logged_in}} --}}
   <div class="one-post">
     <h3>{{post.name}}</h3>
     <p>{{{post.description}}}</p>
     <h4 class="comment-sec">Comments:</h4>
     {{#each comments as |comment|}}
-    <p>{{{comment.description}}}</p>
-    <p>- {{{comment.username}}}</p>
+      <p>{{{comment.description}}}</p>
+      <p>- {{{comment.username}}}</p>
     {{/each}}
   </div>
   <div>
     <div class="comments">
       <label class="comment" for="comment">Add Comment:</label>
-      <textarea type="text-box" class="comment-description" name="comment-desc"></textarea>
+      <textarea
+        type="text-box"
+        class="comment-description"
+        name="comment-desc"
+      ></textarea>
     </div>
     <div>
-      <button type="submit" data-id="{{post.id}}" class="comment-submit">Submit</button>
+      <button
+        type="submit"
+        data-id="{{post.id}}"
+        class="comment-submit"
+      >Submit</button>
     </div>
   </div>
 </div>
-{{!-- {{else}} --}}
-{{!-- <a href="/login"></a> --}}
-{{!-- {{/if}} --}}
-  {{!-- <p>{{format_date date_created}}</p> --}}
-
-  {{!-- <form class="new-post">
-    <div class="title">
-      <label for="post-title">Post Title:</label>
-      <input type="text" class="post-title" name="post-title"/>
-    </div>
-    <div class="post-desc">
-      <label for="post-desc">Post Description</label>
-      <input type="text" class="post-desc" name="post-desc"/>
-    </div>
-    <div>
-      <button type="submit" class="post-submit">Create</button>
-    </div>
-  </form>
-</div> --}}
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="/js/dashboard.js"></script>
 <script src="/js/post.js"></script>
-

@@ -1,204 +1,196 @@
 body {
-    width: 100%;
-    background-color: rgb(162, 176, 185);
-    color: rgb(0, 0, 0);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 100%;
+  background-color: rgb(162, 176, 185);
+  color: rgb(0, 0, 0);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 #header {
-    width: 100%;
-    text-align: center;
-    /* display: flex;
-    flex-direction: row; */
+  width: 100%;
+  text-align: center;
 }
 nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    justify-content: space-evenly;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    font-weight: bolder;
-    font-style: italic;
-    text-decoration: underline;
-    text-decoration-color: black;
-    width: 87%;
-    padding: 20px;
-    height: 10px;
-    margin-bottom: -2px;
-    border: 2px solid black;
-    border-radius: 15px;
-    margin-left: 50px;
-    margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: space-evenly;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-color: black;
+  width: 87%;
+  padding: 20px;
+  height: 10px;
+  margin-bottom: -2px;
+  border: 2px solid black;
+  border-radius: 15px;
+  margin-left: 50px;
+  margin-bottom: 30px;
 }
 nav a {
-    color: rgb(27, 37, 43);
-    
+  color: rgb(27, 37, 43);
 }
 
 .login {
-    margin-top: 100px;
-    margin-left: 450px;
-    padding: 10px;
-    width: 30%;
-    text-align: center;
-   border: 3px solid black;
+  margin-top: 100px;
+  margin-left: 450px;
+  padding: 10px;
+  width: 30%;
+  text-align: center;
+  border: 3px solid black;
 }
 .login-title {
-    display: flex;
-    margin-left: 135px;
-
+  display: flex;
+  margin-left: 135px;
 }
 
 #userEmail {
-    font-size: 15px;
-    margin-top: 30px ;
+  font-size: 15px;
+  margin-top: 30px;
 }
 
 .btn {
-    padding: 3px;
-    width: 100px;
-    margin: 30px;
+  padding: 3px;
+  width: 100px;
+  margin: 30px;
 }
 
 .email {
-    font-size: larger;
+  font-size: larger;
 }
 
 .password {
-    font-size: larger;
+  font-size: larger;
 }
 .signup {
-    margin-top: 100px;
-    margin-left: 450px;
-    padding: 10px;
-    width: 30%;
-    text-align: center;
-   border: 3px solid black;
+  margin-top: 100px;
+  margin-left: 450px;
+  padding: 10px;
+  width: 30%;
+  text-align: center;
+  border: 3px solid black;
 }
 #email-addon {
-    font-size: x-small;
+  font-size: x-small;
 }
 .card {
-    width: 80%;
-    padding: 5px;
-    margin-left: 70px;
-    border: 3px solid black;
-    text-align: center;
+  width: 80%;
+  padding: 5px;
+  margin-left: 70px;
+  border: 3px solid black;
+  text-align: center;
 }
 .postTitle {
-    width: 80%;
-    height: 40px;
-    text-align: center;
-    margin-top: 50px;
-    margin-left: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: large;
-    background-color: rgb(158, 159, 160);
-    color: black;
-    
+  width: 80%;
+  height: 40px;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: large;
+  background-color: rgb(158, 159, 160);
+  color: black;
 }
 .postDescription {
-    width: 80%;
-    height: 60px;
-    font-size: large;
-    margin-left: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgb(158, 159, 160);
-    color: black;
-    margin-top: 5px;
-    text-align: center;
+  width: 80%;
+  height: 60px;
+  font-size: large;
+  margin-left: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(158, 159, 160);
+  color: black;
+  margin-top: 5px;
+  text-align: center;
 }
 .post {
-    border: 1px solid black;
-    margin: 5px;
-    width: 90%;
-    margin-left: 50px;
-    text-indent: 15px;
-
+  border: 1px solid black;
+  margin: 5px;
+  width: 90%;
+  margin-left: 50px;
+  text-indent: 15px;
 }
 .post a {
-    color: black;
+  color: black;
 }
 .post-btn {
-    margin-left: 450px;
-    width: 30%;
-    height: 30px;
-
+  margin-left: 450px;
+  width: 30%;
+  height: 30px;
 }
 .create-btn {
-    width: 100px;
-    margin-top: 400px;
-    margin-left: 600px;
-    background-color: rgb(106, 105, 114);
-
+  width: 100px;
+  margin-top: 400px;
+  margin-left: 600px;
+  background-color: rgb(106, 105, 114);
 }
 
 .column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .column1 {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    margin-left: 100px;
-    font-size: large;
-    border: 3px solid black;
-    border-radius: 20px;
-    padding: 10px;
-    align-items: center;
-    height: 200px;
-    margin-top: -1px;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: 100px;
+  font-size: large;
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 10px;
+  align-items: center;
+  height: 200px;
+  margin-top: -1px;
 }
 
-.column2{
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    margin-left: 900px;
-    margin-top: -240px;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
-    border-radius: 10px;
-    height: 500px;
-    padding-left: 50px;
+.column2 {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin-left: 900px;
+  margin-top: -240px;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  border-radius: 10px;
+  height: 500px;
+  padding-left: 50px;
 }
 .dash-head {
-    text-align: center;
+  text-align: center;
 }
 
 .post-title {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .desc-title {
-    top: 6;
+  top: 6;
 }
 
 .post-page {
-    border: 3px solid black;
-    text-align: center;
-    height: 530px;
-    width: 95%;
-    margin-left: 15px;
-    border-radius: 15px;
+  border: 3px solid black;
+  text-align: center;
+  height: 530px;
+  width: 95%;
+  margin-left: 15px;
+  border-radius: 15px;
 }
 .comment-sec {
-    margin-top: 80px;
-    border-top: 2px solid black;
-    border-radius: 10px;
-    width: 600px;
-    margin-left: 380px;
-    padding-bottom: 30px;
-    padding-top: 20px;
+  margin-top: 80px;
+  border-top: 2px solid black;
+  border-radius: 10px;
+  width: 600px;
+  margin-left: 380px;
+  padding-bottom: 30px;
+  padding-top: 20px;
 }
 .comments {
-    margin-top: 150px;
+  margin-top: 150px;
 }
 .hide {
-    display: none;
+  display: none;
 }
-

@@ -8,7 +8,6 @@ router.get("/", async (req, res) => {
             include: [
                 {
                     model: User,
-                  //  attributes: ["email"]
                 }
             ]
         });
@@ -28,10 +27,6 @@ router.get("/post/:id", auth, async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
             include: [
-                // {
-                //     model: User,
-                //     attributes: ["email"]
-                // },
                 {
                     model: Comment,
                     attributes: ["description", "user_id", "post_id", "username"]
@@ -69,7 +64,6 @@ router.get("/dashboard", auth, async (req, res) => {
         res.render("dashboard", {
             posts,
             logged_in: req.session.logged_in
-            // showModal: false
         });
     }
     catch (err) {

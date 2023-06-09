@@ -1,18 +1,18 @@
 [
-    {
-        "email": "johndoe@hotmail.com",
-        "password": "password12345"
-    },
-    {
-        "email": "janedoe@gmail.com",
-        "password": "password12345"   
-    },
-    {
-        "email": "drewcamp@hotmail.com",
-        "password": "password12345"
-    },
-    {
-        "email": "sammyyy@hotmail.com",
-        "password": "password12345"
-    }
+  {
+    "email": "johndoe@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "email": "janedoe@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "email": "drewcamp@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "email": "sammyyy@hotmail.com",
+    "password": "password12345"
+  }
 ]
