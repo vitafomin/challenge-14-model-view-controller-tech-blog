@@ -199,3 +199,6 @@ nav a {
 .hide {
   display: none;
 }
+.my-post a {
+  color: black;
+}
